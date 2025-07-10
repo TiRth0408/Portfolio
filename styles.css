@@ -306,6 +306,7 @@ footer a:hover {
     }
 
     /* Home Section */
+
     #home h1 {
         font-size: 2rem;
     }
@@ -324,75 +325,9 @@ footer a:hover {
         margin-top: 2rem;
     }
 
-    /* Contact Section */
-    #contact h2 {
-        font-size: 1.8rem;
-    }
-
-    .contact-info-card h4,
-    .contact-form-card h4 {
-        font-size: 1.2rem;
-    }
-
-    .contact-info-card h6,
-    .contact-form-card label {
-        font-size: 0.95rem;
-    }
-
-    .contact-form-card .form-control {
-        font-size: 0.95rem;
-    }
-
-    .btnf {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    /* CV section, skills, education cards adjustments if needed */
-    .skill-card i,
-    .education-card i,
-    .contact-info-card i,
-    .cv-content i {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 770px) {
-
-    /* Navbar */
-    .navbar-brand {
-        font-size: 1.3rem;
-    }
-
-    .nav-link {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.95rem;
-    }
-
-    /* Home Section */
-    #home {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    #home h1 {
-        font-size: 2rem;
-    }
-
-    #home p.lead {
-        font-size: 1rem;
-    }
-
-    .btn-lg {
-        padding: 0.6rem 1.5rem;
-        font-size: 1rem;
-    }
-
-    /* Profile Image */
-    .profile-image {
-        margin-top: 1rem;
+    .py-5 {
+        padding-top: 0rem !important;
+        padding-bottom: 1rem !important;
     }
 
     /* Contact Section */
@@ -452,11 +387,9 @@ footer a:hover {
     }
 
     /* Home Section */
+
     #home {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin-top: 0;
-        margin-bottom: 0;
+        min-height: 80vh !important;
     }
 
     #home h1 {
@@ -475,7 +408,7 @@ footer a:hover {
     /* Profile Image */
     .profile-image {
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
 
     /* Contact Section */
