@@ -21,18 +21,21 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 /* Navbar */
 .navbar {
     background-color: #000000;
     transition: all 0.3s ease;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand span {
+    color: #1e90ff;
 }
 
 .nav-link {
@@ -67,15 +70,25 @@ body {
     color: #1e90ff;
 }
 
-.navbar-brand span {
-    color: #1e90ff;
+
+
+/* Home Section */
+#home h1 {
+    font-size: 2rem;
+}
+
+#home p.lead {
+    font-size: 1rem;
 }
 
 /* Profile Image */
 .profile-image {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(30, 144, 255, 0.4);
+    margin-top: 2rem;
 }
+
+
 
 /* Buttons */
 .btn-primary {
@@ -103,6 +116,8 @@ body {
     text-align: center;
 }
 
+
+
 /* Cards */
 .skill-card,
 .education-card,
@@ -122,6 +137,8 @@ body {
     font-size: 2rem;
 }
 
+
+
 /* CV profile image */
 .cv-profile-img {
     max-width: 100%;
@@ -132,6 +149,8 @@ body {
     transition: all 0.5s ease;
     opacity: 1;
 }
+
+
 
 /* Footer */
 footer {
@@ -148,26 +167,20 @@ footer a:hover {
 }
 
 
+
 /* Contact Section */
 #contact {
     background-color: #0d0d0d;
     color: #e0e0e0;
 }
 
-/* Section Titles */
-/* #contact h2 {
-    color: #fff;
-} */
-
 #contact h2 span {
     color: #1e90ff;
-    /* blue highlight */
 }
 
 #contact .section-subtitle {
     color: #999;
 }
-
 
 /* Contact Info Card */
 .contact-info-card {
@@ -239,6 +252,8 @@ footer a:hover {
     background-color: #187bcd;
 }
 
+
+
 /* Social Icons */
 .social-icons a {
     width: 40px;
@@ -260,6 +275,8 @@ footer a:hover {
     text-decoration: none;
     box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
 }
+
+
 
 /* Back to Top Button */
 .back-to-top {
