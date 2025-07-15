@@ -54,6 +54,13 @@ gsap.from(".education-card", {
     stagger: 0.2
 });
 
+// Refresh the link when submit the form
+
+ document.getElementById("contactForm").addEventListener("submit", function(){
+        setTimeout(function(){
+            window.location.href = "index.html"; // your home page
+        }, 1000); // 1 second delay to allow form submission
+    });
 
 document.getElementById('downloadPdfBtn').addEventListener('click', function (e) {
     e.preventDefault();
