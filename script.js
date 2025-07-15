@@ -111,7 +111,7 @@ showCvBtn.addEventListener("click", () => {
 // Download Resume PDF
 document.getElementById("downloadPdfBtn").addEventListener("click", function(e) {
         e.preventDefault();
-        window.open("/pdf/Tirth_Resume.pdf", "_blank");
+        window.open("/Tirth_Resume.pdf", "_blank");
     });
 
 // Contact Section
