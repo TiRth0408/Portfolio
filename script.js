@@ -8,6 +8,19 @@ gsap.from("#navbar", {
     duration: 1
 });
 
+// Cursor Effect
+
+  const cursor = document.getElementById('cursor');
+  const cursorBlur = document.getElementById('cursor-blur');
+
+  document.addEventListener('mousemove', function(e){
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+    cursorBlur.style.top = e.clientY + 'px';
+    cursorBlur.style.left = e.clientX + 'px';
+  });
+
+
 // Home Section
 gsap.from("#home h1", {
     x: -100,
@@ -55,13 +68,14 @@ gsap.from(".education-card", {
 });
 
 // Refresh the link when submit the form
-
  document.getElementById("contactForm").addEventListener("submit", function(){
         setTimeout(function(){
-            window.location.href = "index.html"; // your home page
-        }, 1000); // 1 second delay to allow form submission
+            window.location.href = "index.html";
+        }, 1000);
     });
 
+
+    // Download CV PDF
 document.getElementById('downloadPdfBtn').addEventListener('click', function (e) {
     e.preventDefault();
     var cvContent = document.getElementById('cvContent');

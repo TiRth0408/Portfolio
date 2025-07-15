@@ -78,6 +78,36 @@ body {
 }
 
 
+/* Cursor Effect */
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #1057da;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 99;
+}
+
+#cursor-blur {
+  filter: blur(40px);
+  height: 200px;
+  width: 200px;
+  background-color: #3563bf44;
+  border-radius: 40%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9;
+}
+
+
+
 
 /* Home Section */
 #home h1 {
@@ -440,14 +470,13 @@ footer a:hover {
     }
 
     /* Profile Image */
-    .profile-image {
-        width: 100%;
-        margin-top: 1.5rem;
+    .cv-profile-img {
+        display: none;
     }
 
     /* Contact Section */
     #contact h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem;  
     }
 
     .contact-info-card h4,
@@ -486,5 +515,9 @@ footer a:hover {
         height: 35px;
         font-size: 0.9rem;
         margin: 0 0.3rem;
+    }
+
+    .social-icons {
+        padding-top: 5px;
     }
 }
