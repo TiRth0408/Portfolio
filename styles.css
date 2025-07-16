@@ -24,7 +24,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #000000;
+    background-color: #00000000;
     transition: all 0.3s ease;
 }
 
@@ -82,7 +82,7 @@ body {
 #cursor {
   height: 20px;
   width: 20px;
-  background-color: #1057da;
+  background-color: #417cebc1;
   border-radius: 50%;
   position: fixed;
   top: 0;
