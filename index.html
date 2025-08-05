@@ -343,9 +343,8 @@
                                 class="btn btn-outline-primary" aria-label="Download CV as PDF">Download PDF</a>
                         </div> -->
                         <div class="card-footer bg-transparent text-center">
-                            <a href="/pdf/Tirth_Resume.pdf" id="downloadPdfBtn"
-                                class="btn btn-outline-primary" aria-label="Download CV as PDF" target="_blank"
-                                rel="noopener noreferrer">
+                            <a href="/pdf/Tirth_Resume.pdf" id="downloadPdfBtn" class="btn btn-outline-primary"
+                                aria-label="Download CV as PDF" target="_blank" rel="noopener noreferrer">
                                 View & Download PDF
                             </a>
                         </div>
@@ -412,9 +411,12 @@
                     <div class="card shadow contact-form-card">
                         <div class="card-body p-4">
                             <h4 class="fw-bold mb-4">Send Me a Message</h4>
-                            <form id="contactForm" method="POST" action="https://formsubmit.co/ttirth41@gmail.com"
-                                action="sendemail.php">
-                                <input type="hidden" name="_next" value="https://tirth0408.github.io/Portfolio/">
+                            <form id="contactForm" method="POST" action="https://formsubmit.co/ttirth41@gmail.com">
+                                <input type="hidden" name="_next"
+                                    value="https://tirth0408.github.io/Portfolio/?success=true">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_subject" value="New Contact from Portfolio Website">
+
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="name" class="form-label">Your Name</label>
@@ -434,11 +436,11 @@
                                             required></textarea>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btnf" type="submit" class="btn btn-primary px-4">Send
-                                            Message</button>
+                                        <button type="submit" class="btn btn-primary px-4">Send Message</button>
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
