@@ -10,15 +10,15 @@ gsap.from("#navbar", {
 
 // Cursor Effect
 
-  const cursor = document.getElementById('cursor');
-  const cursorBlur = document.getElementById('cursor-blur');
+const cursor = document.getElementById('cursor');
+const cursorBlur = document.getElementById('cursor-blur');
 
-  document.addEventListener('mousemove', function(e){
+document.addEventListener('mousemove', function (e) {
     cursor.style.top = e.clientY + 'px';
     cursor.style.left = e.clientX + 'px';
     cursorBlur.style.top = e.clientY + 'px';
     cursorBlur.style.left = e.clientX + 'px';
-  });
+});
 
 
 // Home Section
@@ -68,19 +68,19 @@ gsap.from(".education-card", {
 });
 
 // Refresh the link when submit the form
- document.getElementById("contactForm").addEventListener("submit", function(){
-        setTimeout(function(){
-            window.location.href = "index.html";
-        }, 1000);
-    });
+document.getElementById("contactForm").addEventListener("submit", function () {
+    setTimeout(function () {
+        window.location.href = "index.html";
+    }, 1000);
+});
 
 
-    // Download CV PDF
+// Download CV PDF
 document.getElementById('downloadPdfBtn').addEventListener('click', function (e) {
     e.preventDefault();
     var cvContent = document.getElementById('cvContent');
     cvContent.classList.remove('d-none');
-    setTimeout(function() {
+    setTimeout(function () {
         html2pdf()
             .set({
                 margin: 0.5,
@@ -109,10 +109,10 @@ showCvBtn.addEventListener("click", () => {
 });
 
 // Download Resume PDF
-document.getElementById("downloadPdfBtn").addEventListener("click", function(e) {
-        e.preventDefault();
-        window.open("https://ttirth41.github.io/Portfolio/pdf/Tirth_Resume.pdf", "_blank");
-    });
+document.getElementById("downloadPdfBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.open("https://ttirth41.github.io/Portfolio/pdf/Tirth_Resume.pdf", "_blank");
+});
 
 // Contact Section
 gsap.from("#contact h2", {
