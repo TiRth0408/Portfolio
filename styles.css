@@ -79,23 +79,11 @@ body {
 
 
 /* Cursor Effect */
-#cursor {
-  height: 20px;
-  width: 20px;
-  background-color: #417cebc1;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 99;
-}
 
 #cursor-blur {
-  filter: blur(40px);
-  height: 200px;
-  width: 200px;
+  filter: blur(20px);
+  height: 150px;
+  width: 150px;
   background-color: #3563bf44;
   border-radius: 40%;
   position: fixed;
@@ -105,7 +93,6 @@ body {
   pointer-events: none;
   z-index: 9;
 }
-
 
 
 
