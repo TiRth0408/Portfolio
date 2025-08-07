@@ -1,0 +1,14 @@
+#education {
+    background-color: #000;
+}
+
+.education-card {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #0d6efd;
+    transition: box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    box-shadow: 0 0 15px #0d6efd;
+}

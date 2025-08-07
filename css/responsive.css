@@ -1,0 +1,42 @@
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .profile-image {
+      display: none;
+    }
+
+    .home-btn {
+        justify-content: center;
+    }
+
+    .cv-profile-img {
+        margin-bottom: 1rem;
+    }
+
+    .back-to-top {
+      bottom: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1, .display-4 {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+        padding: 1rem;
+    }
+
+    .back-to-top {
+      bottom: 20px;
+      right: 15px;
+    }
+}

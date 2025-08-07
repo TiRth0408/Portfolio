@@ -74,27 +74,6 @@ document.getElementById("contactForm").addEventListener("submit", function () {
     }, 1000);
 });
 
-
-// Download CV PDF
-document.getElementById('downloadPdfBtn').addEventListener('click', function (e) {
-    e.preventDefault();
-    var cvContent = document.getElementById('cvContent');
-    cvContent.classList.remove('d-none');
-    setTimeout(function () {
-        html2pdf()
-            .set({
-                margin: 0.5,
-                filename: 'Tirth Resume.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-            })
-            .from(cvContent)
-            .save();
-    }, 0);
-});
-
-
 // Show CV Button Toggle
 const showCvBtn = document.getElementById("showCvBtn");
 const cvContent = document.getElementById("cvContent");
@@ -111,7 +90,7 @@ showCvBtn.addEventListener("click", () => {
 // Download Resume PDF
 document.getElementById("downloadPdfBtn").addEventListener("click", function (e) {
     e.preventDefault();
-    window.open("https://ttirth41.github.io/Portfolio/pdf/Tirth_Resume.pdf", "_blank");
+    window.open("/pdf/Tirth_Resume.pdf", "_blank");
 });
 
 // Contact Section
@@ -137,12 +116,24 @@ gsap.from(".contact-info-card, .contact-form-card", {
 });
 
 // Back to Top Button functionality
-const backToTop = document.querySelector(".back-to-top");
 
+const backToTopBtn = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
-        backToTop.classList.add("active");
+        backToTopBtn.classList.add("show");
     } else {
-        backToTop.classList.remove("active");
+        backToTopBtn.classList.remove("show");
     }
 });
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    // You can add basic validation if needed here
+
+    alert("Thank you! Your message has been sent.");
+
+    // Now submit the form manually
+    event.target.submit();
+    return true;
+}
