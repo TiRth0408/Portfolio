@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Set correct PDF path for GitHub Pages
-    const pdfPath = window.location.hostname.includes("github.io")
-        ? "https://github.com/TiRth0408/Portfolio"
+    const pdfPath = window.location.hostname.includes("github.com")
+        ? "pdf/Tirth_Resume.pdf"
         : "./pdf/Tirth_Resume.pdf";
 
     downloadPdfBtn.href = pdfPath;
