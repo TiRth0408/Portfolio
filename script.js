@@ -90,7 +90,7 @@ showCvBtn.addEventListener("click", () => {
 // Download Resume PDF
 document.getElementById("downloadPdfBtn").addEventListener("click", function (e) {
     e.preventDefault();
-    window.open("https://github.com/TiRth0408/Portfolio/blob/main/pdf/Tirth_Resume.pdf", "_blank");
+    window.open("./pdf/Tirth_Resume.pdf", "_blank");
 });
 
 // Contact Section
