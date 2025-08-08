@@ -74,23 +74,28 @@ document.getElementById("contactForm").addEventListener("submit", function () {
     }, 1000);
 });
 
-// Show CV Button Toggle
-const showCvBtn = document.getElementById("showCvBtn");
-const cvContent = document.getElementById("cvContent");
-
-showCvBtn.addEventListener("click", () => {
-    cvContent.classList.toggle("d-none");
-    if (cvContent.classList.contains("d-none")) {
-        showCvBtn.textContent = "Show My CV";
-    } else {
-        showCvBtn.textContent = "Hide My CV";
-    }
-});
-
 // Download Resume PDF
-document.getElementById("downloadPdfBtn").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.open("./pdf/Tirth_Resume.pdf", "_blank");
+document.addEventListener("DOMContentLoaded", function () {
+    const showCvBtn = document.getElementById("showCvBtn");
+    const cvContent = document.getElementById("cvContent");
+    const downloadPdfBtn = document.getElementById("downloadPdfBtn");
+
+    // Show/hide CV content
+    showCvBtn.addEventListener("click", () => {
+        cvContent.classList.toggle("d-none");
+        if (cvContent.classList.contains("d-none")) {
+            showCvBtn.textContent = "Show My CV";
+        } else {
+            showCvBtn.textContent = "Hide My CV";
+        }
+    });
+
+    // Set correct PDF path for GitHub Pages
+    const pdfPath = window.location.hostname.includes("github.io")
+        ? "https://github.com/TiRth0408/Portfolio"
+        : "./pdf/Tirth_Resume.pdf";
+
+    downloadPdfBtn.href = pdfPath;
 });
 
 // Contact Section
@@ -129,11 +134,8 @@ window.addEventListener("scroll", () => {
 function handleSubmit(event) {
     event.preventDefault();
 
-    // You can add basic validation if needed here
-
     alert("Thank you! Your message has been sent.");
 
-    // Now submit the form manually
     event.target.submit();
     return true;
 }
