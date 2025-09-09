@@ -2,498 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="shortcut icon" href="images/TK LOGO.webp" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/education.css">
-    <link rel="stylesheet" href="css/cv.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="shortcut icon" href="images/TK LOGO.webp" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/education.css">
+  <link rel="stylesheet" href="css/cv.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <!-- <img src="images/TK LOGO.webp" alt=""> -->
-            <a class="navbar-brand" href="#"><span class="text-primary">Tirth</span> Kadivar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cv">CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div id="cursor"></div>
-    <div id="cursor-blur"></div>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><span class="text-primary">Tirth</span> Kadivar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="d-flex align-items-center min-vh-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Hi, I'm <span class="text-secondary">Tirth Kadivar</span>
-                    </h1>
-                    <p class="lead mb-4"><b>I'm a passionate web designer and developer creating beautiful,
-                            functional websites that deliver results.</b></p>
-                    <div class="home-btn d-flex gap-3">
-                        <a href="#contact" class="btn btn-primary btn-lg px-4">Hire Me</a>
-                        <a href="#cv" class="btn btn-outline-primary btn-lg px-4">View CV</a>
+  <!-- Section Containers -->
+  <div id="home"></div>
+  <div id="skills"></div>
+  <div id="education"></div>
+  <div id="cv"></div>
+  <div id="contact"></div>
+  <div id="footer"></div>
 
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/HomeAvtar.png" alt="Profile Image" class="img-fluid profile-image">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-        <div class="container py-5">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="fw-bold display-5">My <span class="text-primary">Skills</span></h2>
-                    <p class="section-subtitle">Here are the technologies I work with</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box mb-4">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <h5 class="fw-bold">HTML5</h5>
-                            <p>Semantic markup and clean structure for all my projects.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box mb-4">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <h5 class="fw-bold">CSS3</h5>
-                            <p>Modern styling with animations and responsive design.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box mb-4">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <h5 class="fw-bold">JavaScript</h5>
-                            <p>Interactive and dynamic web applications.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box mb-4">
-                                <i class="fab fa-bootstrap"></i>
-                            </div>
-                            <h5 class="fw-bold">Bootstrap</h5>
-                            <p>Rapid prototyping and responsive layouts.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box mb-4">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <h5 class="fw-bold">React</h5>
-                            <p>Building modern single-page applications.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow skill-card">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-box mb-4">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h5 class="fw-bold">Database</h5>
-                            <p>MySQL for data storage.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+  <!-- JS Loader -->
+  <script>
+    function loadSection(id, file) {
+      fetch(file)
+        .then(response => {
+          if (!response.ok) throw new Error("Failed to load " + file);
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+        })
+        .catch(err => console.error(err));
+    }
 
-    <!-- Education Section -->
-    <section id="education" class="py-5">
-        <div class="container py-5">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="fw-bold display-5">My <span class="text-primary">Education</span></h2>
-                    <p class="section-subtitle">Schools and colleges I attended</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card shadow h-100 education-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-school"></i>
-                                </div>
-                                <div>
-                                    <h5 class="fw-bold mb-0">High School</h5>
-                                    <p class="text-primary mb-0">Vidhya Nagar High School</p>
-                                </div>
-                            </div>
-                            <p class="mb-0">Attended from 2019 to 2020. Participated in various extracurricular
-                                activities including debate
-                                competitions and science fairs.</p>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <small class="text-primary">2019 - 2020</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card shadow h-100 education-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <div>
-                                    <h5 class="fw-bold mb-0">College</h5>
-                                    <p class="text-primary mb-0">LJ CAMPUS</p>
-                                </div>
-                            </div>
-                            <p class="mb-0">Graduated with a Bachelor's degree in Computer Applications in 2023.
-                                Specialized in web development and database management. Completed several projects
-                                including a college management system.</p>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <small class="text-primary">2020 - 2023</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card shadow h-100 education-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div>
-                                    <h5 class="fw-bold mb-0">Postgraduate</h5>
-                                    <p class="text-primary mb-0">RB Institute Of Management</p>
-                                </div>
-                            </div>
-                            <p class="mb-0">Completed a Master's program in Advanced Web Technologies in
-                                2026. Focused on modern frameworks, performance optimization, and security best
-                                practices.</p>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <small class="text-primary">2024 - 2026</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card shadow h-100 education-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-certificate"></i>
-                                </div>
-                                <div>
-                                    <h5 class="fw-bold mb-0">Certifications</h5>
-                                    <p class="text-primary mb-0">Various Online Platforms</p>
-                                </div>
-                            </div>
-                            <p class="mb-0">Completed multiple online certifications in web development,
-                                UI/UX design, and Data Store from platforms like Great Learning and also i have offline
-                                certificate from Vibrant India Tech.
-                            </p>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <small class="text-primary">Ongoing</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadSection("home", "sections/home.html");
+      loadSection("skills", "sections/skills.html");
+      loadSection("education", "sections/education.html");
+      loadSection("cv", "sections/cv.html", initCvSection); // ✅ init after load
+      loadSection("contact", "sections/contact.html");
+      loadSection("footer", "sections/footer.html");
+    });
 
-    <!-- CV Section -->
-    <section id="cv" class="py-5">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bold display-5 mb-4">My <span class="text-primary">Resume</span>
-                    </h2>
-                    <p class="lead mb-5">Download my complete CV to learn more about my professional
-                        experience and qualifications.</p>
-                    <button id="showCvBtn" class="btn btn-primary btn-lg px-5 mb-4">Show My CV</button>
-                    <div id="cvContent" class="card shadow text-start cv-content d-none">
-                        <div class="card-body p-5">
-                            <div class="row mb-4">
-                                <div class="col-md-3">
-                                    <img src="images/Black.webp" alt="Profile Photo" class="img-fluid cv-profile-img">
-                                </div>
-                                <div class="col-md-9">
-                                    <h3 class="fw-bold">Tirth Kadivar</h3>
-                                    <p class="text-primary">Web Designer & Developer</p>
-                                    <p><i class="fas fa-envelope me-2 text-primary"></i>
-                                        ttirth41@gmail.com</p>
-                                    <p><i class="fas fa-phone me-2 text-primary"></i> +91 7046417487
-                                    </p>
-                                </div>
-                            </div>
+  </script>
 
-                            <h4 class="fw-bold border-bottom pb-2 mb-3">Professional Summary</h4>
-                            <p class="mb-4">Creative and detail-oriented web designer
-                                experience designing and developing user-friendly websites. Proficient in HTML, CSS,
-                                JavaScript, and Bootstrap. Strong understanding of UI/UX principles and responsive
-                                design.</p>
+  <!-- External JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-                            <h4 class="fw-bold border-bottom pb-2 mb-3">Work Experience</h4>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Web Development</h5>
-                                <p class="text-primary">Vibrant India Tech</p>
-                                <ul>
-                                    <li>Developed responsive websites using HTML, CSS, Bootstrap, and JavaScript</li>
-                                    <li>Implemented form validation and database connectivity</li>
-                                    <li>Used Bootstrap for mobile-friendly designs</li>
-                                </ul>
-                            </div>
-
-                            <h4 class="fw-bold border-bottom pb-2 mb-3">Education</h4>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Bachelor's in Computer Applications</h5>
-                                <p class="text-primary">LJ CAMPUS | 2021 - 2024</p>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Master's in Computer Applications</h5>
-                                <p class="text-primary">RB Institute of Management System | 2024 - 2026</p>
-                            </div>
-
-                            <h4 class="fw-bold border-bottom pb-2 mb-3">Projects</h4>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Online Shopping System</h5>
-                                <p class="text-primary">I have developed a online shopping project in my collage. In
-                                    this project
-                                    I was leading our team which were three people with good knowledge
-                                    of project requirements. Skills that have I have used to develop this
-                                    project is as per below: HTML, CSS, Java Script.
-                                </p>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Food Zone</h5>
-                                <p class="text-primary">I have developed a food zone application project in my college.
-                                    In this project i was leading our team. We are three people with
-                                    good knowledge of project. We have develop this project
-                                    using: Android Studio. We are also using Firebase to collect the
-                                    real-time data.</p>
-                            </div>
-
-                            <h4 class="fw-bold border-bottom pb-2 mb-3">Skills</h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <ul>
-                                        <li>HTML5 & CSS3</li>
-                                        <li>JavaScript</li>
-                                        <li>Bootstrap</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul>
-                                        <li>React.js</li>
-                                        <li>MySQL</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-footer bg-transparent text-center">
-                            <a id="downloadPdfBtn" class="btn btn-outline-primary" aria-label="Download CV as PDF">
-                                View & Download PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container py-5">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="fw-bold display-5">Contact <span class="text-primary">Me</span></h2>
-                    <p class="section-subtitle">Get in touch for collaborations or just say hello</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-5">
-                    <div class="card shadow h-100 contact-info-card">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold mb-4">Contact Information</h4>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Address</h6>
-                                    <p class="text-muted mb-0">A-14 Maruti Nandan Society</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Email</h6>
-                                    <p class="text-muted mb-0">ttirth41@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Phone</h6>
-                                    <p class="text-muted mb-0">+91 7046417487</p>
-                                </div>
-                            </div>
-                            <!-- <div class="d-flex align-items-start">
-                                <div class="icon-box me-3">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Working Hours</h6>
-                                    <p class="text-muted mb-0">Mon-Fri: 9AM - 5PM</p>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="card shadow contact-form-card">
-                        <div class="card-body p-4">
-                            <h4 class="fw-bold mb-4">Send Me a Message</h4>
-                            <form id="contactForm" method="POST" action="https://formsubmit.co/ttirth41@gmail.com"
-                                onsubmit="return handleSubmit(event)">
-                                <input type="hidden" name="_next"
-                                    value="https://tirth0408.github.io/Portfolio/?success=true">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_subject" value="New Contact from Portfolio Website">
-
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label">Your Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label">Your Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="subject" class="form-label">Subject</label>
-                                        <input type="text" class="form-control" id="subject" name="subject" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" rows="5" name="message"
-                                            required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-primary px-4">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">© 2025 Tirth Kadivar. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/tirthu_48/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/tirth-kadivar-362391240/" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/TiRth0408" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- SweetAlert2 CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Custom JS -->
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="script.js"></script>
+  <!-- Section Scripts -->
+  <script src="script/home.js"></script>
+  <script src="script/skills.js"></script>
+  <script src="script/education.js"></script>
+  <script src="script/cv.js"></script>
+  <script src="script/contact.js"></script>
+  <script src="script/backtotop.js"></script>
+  <script src="script/main.js"></script>
 </body>
 
 </html>
