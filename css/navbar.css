@@ -1,0 +1,111 @@
+/* ===============================
+   NAVBAR – MINT GLASS THEME
+================================ */
+
+/* ===============================
+   NAVBAR BRAND ANIMATION
+================================ */
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Animated first name */
+#brand-animated {
+  color: #134e4a;
+  min-width: 70px;
+}
+
+/* Last name color */
+.brand-lastname {
+  color: #14b8a6; /* mint color */
+}
+
+
+.navbar {
+  background: rgba(255, 255, 255, 0.65);
+  /* backdrop-filter: blur(14px); */
+  /* -webkit-backdrop-filter: blur(14px); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 14px 0;
+  transition: all 0.3s ease;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #14b8a6 !important;
+}
+
+.navbar-brand span {
+  color: #14b8a6;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  color: #134e4a;
+  font-weight: 500;
+  margin-left: 22px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #14b8a6;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #14b8a6;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#brand-typewriter {
+  font-weight: 700;
+  color: #14b8a6; /* mint theme */
+  white-space: nowrap;
+}
+
+/* Mobile Menu */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.85);
+    /* backdrop-filter: blur(12px); */
+    border-radius: 16px;
+    padding: 15px;
+    margin-top: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}

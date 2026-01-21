@@ -1,0 +1,65 @@
+/* ===============================
+   SKILL CARD – MINT LIGHT COLORS
+================================ */
+body{
+    background: linear-gradient( 135deg, #e6fffa 0%, #ccfbf1 45%, #ffffff 100% ); 
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #e6fffa, #ffffff);
+    color: #0f766e;               /* text color */
+    border: 1px solid #5eead4;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 12px 30px rgba(20, 184, 166, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fw-bold{
+    color: #49cec3;
+}
+
+/* Hover */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(20, 184, 166, 0.25);
+}
+
+/* Icon */
+.skill-card i {
+    color: #14b8a6;               /* icon color */
+    font-size: 3rem;    
+    margin-bottom: 1rem;
+}
+
+/* ===============================
+   RESPONSIVE (UNCHANGED)
+================================ */
+
+/* Tablets & below */
+@media (max-width: 768px) {
+    .skill-card {
+        padding: 1.75rem;
+        text-align: center;
+    }
+
+    .skill-card i {
+        font-size: 2.6rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 320px) {
+    
+    .py-5{
+        padding-top: 1.9rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .skill-card {
+        padding: 1rem;
+    }
+
+    .skill-card i {
+        font-size: 2rem;
+    }
+}

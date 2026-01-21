@@ -1,0 +1,17 @@
+{
+    "name": "ttirt/portfolio",
+    "autoload": {
+        "psr-4": {
+            "Ttirt\\Portfolio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kadivar Tirthkumar",
+            "email": "128504479+TiRth0408@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    }
+}

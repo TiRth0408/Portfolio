@@ -1,0 +1,94 @@
+/* CV Section */
+#cv {
+  background: linear-gradient( 135deg, #e6fffa 0%, #ccfbf1 45%, #ffffff 100% );
+}
+
+#showCvBtn {
+  background-color: #49cec3;
+  border: none;
+}
+
+#showCvBtn:hover {
+  background-color: #38b2ac;
+}
+
+.cv-content {
+  background: linear-gradient( 135deg, #e6fffa 0%, #ccfbf1 45%, #ffffff 100% );
+  border: 1px solid #38b2ac;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.5);
+}
+
+.cv-profile-img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+/* Section Headings */
+.cv-content h4 {
+  color: black;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lists */
+.cv-content ul {
+  list-style: none;
+}
+
+.cv-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.cv-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Paragraphs */
+.cv-content p {
+  line-height: 1.6;
+}
+
+/* Footer Button */
+#cv .card-footer {
+  padding: 1.5rem;
+}
+
+#cv .btn {
+  background-color: #64efd363;
+  color: black;
+  transition: all 0.6s ease;
+  font-weight: 500;
+}
+
+#cv .btn:hover {
+  background-color: #49cec3;
+  color: black;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+  transform: translateY(-4px);
+  /* box-shadow: 0 18px 40px rgba(20, 184, 166, 0.45); */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-profile-img {
+    max-width: 100px;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+}

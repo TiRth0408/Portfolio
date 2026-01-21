@@ -1,0 +1,91 @@
+/* ===============================
+   FOOTER – MINT + GLASS THEME
+================================ */
+
+footer {
+    background: linear-gradient(
+        135deg,
+        #e6fffa 0%,
+        #ccfbf1 45%,
+        #ffffff 100%
+    );
+    color: #134e4a;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(20, 184, 166, 0.25);
+}
+
+/* Footer text */
+footer p {
+    color: #134e4a;
+    font-weight: 500;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.4rem;
+    color: #14b8a6;
+    background: rgba(255, 255, 255, 0.7);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(20, 184, 166, 0.4);
+    box-shadow: 0 8px 20px rgba(20, 184, 166, 0.25);
+}
+
+/* Hover Effects */
+.social-icons a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(20, 184, 166, 0.45);
+}
+
+/* ===============================
+   BACK TO TOP BUTTON
+================================ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: 
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(20, 184, 166, 0.35);
+    text-align: center;
+}
+
+.back-to-top.show {
+    display: block;
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: scale(1.12);
+    box-shadow: 0 15px 35px rgba(20, 184, 166, 0.5);
+}

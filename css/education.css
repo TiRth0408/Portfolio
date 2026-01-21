@@ -1,0 +1,22 @@
+#education {
+    background: linear-gradient( 135deg, #e6fffa 0%, #ccfbf1 45%, #ffffff 100% );
+}
+
+.education-card {
+    background: linear-gradient( 135deg, #e6fffa 0%, #ccfbf1 45%, #ffffff 100% );
+    color: #fff;
+    border: 1px solid #49cec3;
+    transition: box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    box-shadow: 0 0 15px #0d6efd;
+}
+
+.mb-0{
+    color: black;
+}
+
+.icon-box i{
+    color: #49cec3;
+}
