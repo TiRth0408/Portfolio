@@ -75,7 +75,7 @@ export default function Home() {
           <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-glow backdrop-blur-xl animate-custom-float">
             <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
             <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900">
-              <img src="../public/images/HomeAvtar.png" alt="Portrait of Tirth Kadivar" className="h-full w-full object-cover transition-transform duration-[5s] hover:scale-110" />
+              <img src="/images/HomeAvtar.png" alt="Portrait of Tirth Kadivar" className="h-full w-full object-cover transition-transform duration-[5s] hover:scale-110" />
             </div>
 
             <div className="absolute -bottom-5 left-4 right-4 grid gap-3 sm:grid-cols-2">
