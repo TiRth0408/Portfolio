@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Resume() {
   return (
-    <section id="cv" className="scroll-mt-28 px-4 py-20 sm:px-6 lg:px-8">
+    <section id="resume" className="scroll-mt-28 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
@@ -53,7 +53,7 @@ export default function Resume() {
 
         <ScrollReveal delay={400} className="mt-8 flex flex-col gap-4 sm:flex-row">
           <a
-            href="../pdf/Tirth_Resume.pdf"
+            href="/pdf/Tirth_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
@@ -61,7 +61,7 @@ export default function Resume() {
             See My CV
           </a>
           <a
-            href="../pdf/Tirth_Resume.pdf"
+            href="/pdf/Tirth_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download="Tirth_Kadivar_Resume.pdf"

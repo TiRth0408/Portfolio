@@ -51,7 +51,7 @@ export default function Home() {
 
           <ScrollReveal delay={400} className="flex flex-col gap-4 sm:flex-row">
             <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-400 to-sky-400 px-7 py-4 text-sm font-bold text-slate-950 shadow-float transition duration-300 hover:-translate-y-1">Start a Project</a>
-            <a href="#cv" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10">Explore Resume</a>
+            <a href="#resume" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10">Explore Resume</a>
           </ScrollReveal>
         </div>
 
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-glow backdrop-blur-xl animate-custom-float">
             <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
             <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900">
-              <img src="/images/HomeAvtar.png" alt="Portrait of Tirth Kadivar" className="h-full w-full object-cover transition-transform duration-[5s] hover:scale-110" />
+              <img src="../public/images/HomeAvtar.png" alt="Portrait of Tirth Kadivar" className="h-full w-full object-cover transition-transform duration-[5s] hover:scale-110" />
             </div>
 
             <div className="absolute -bottom-5 left-4 right-4 grid gap-3 sm:grid-cols-2">
