@@ -1,8 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Effect to automatically close the popup after 2 seconds
+  useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 1000); // 1000 milliseconds = 1 second
+
+      // Cleanup function to clear the timer if the component unmounts or popup is manually closed
+      return () => clearTimeout(timer);
+    }
+  }, [showPopup]); // Re-run this effect when showPopup changes
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatusMessage("");
+
+    // Get your free Access Key from https://web3forms.com/
+    const ACCESS_KEY = '717922be-2ccf-4f7a-bae7-e62866d72c18';
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", ACCESS_KEY);
+    
+    // This changes the display name in your inbox so it doesn't just show the raw email address
+    formData.append("from_name", "New Portfolio Message");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setShowPopup(true); // Show the success popup
+        setStatusMessage(""); // Clear any previous error messages
+        e.target.reset(); // Clears the form fields
+      } else {
+        console.error("Web3Forms Error:", data);
+        setStatusMessage(data.message || "Failed to send the message.");
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      setStatusMessage("An error occurred while sending the message.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="scroll-mt-28 px-4 py-20 sm:px-6 lg:px-8">
@@ -62,15 +114,9 @@ export default function Contact() {
               </div>
 
               <form 
-                method="POST" 
-                action="https://formsubmit.co/ttirth41@gmail.com" 
                 className="space-y-5"
-                onSubmit={() => setIsSubmitting(true)}
+                onSubmit={sendEmail}
               >
-                <input type="hidden" name="_next" value="https://tirth0408.github.io/Portfolio/?success=true" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New Contact from Portfolio Website" />
-
                 <div className="grid gap-5 md:grid-cols-2">
                   <label className="block">
                     <span className="mb-2 block text-sm font-medium text-slate-300">Your Name</span>
@@ -95,11 +141,43 @@ export default function Contact() {
                 <button type="submit" disabled={isSubmitting} className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-400 to-sky-400 px-7 py-4 text-sm font-bold text-slate-950 shadow-float transition duration-300 hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0">
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
+                
+                {statusMessage && (
+                  <p className="mt-4 text-sm font-medium text-brand-200">{statusMessage}</p>
+                )}
               </form>
             </div>
           </ScrollReveal>
         </div>
       </div>
+
+      {/* Success Popup Modal */}
+      {showPopup && (
+        <>
+          <style>
+            {`
+              @keyframes fade-in {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              .animate-fade-in {
+                animation: fade-in 0.3s ease-out forwards;
+              }
+            `}
+          </style>
+          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm animate-fade-in">
+            <div className="relative w-full max-w-sm rounded-[2rem] border border-white/10 bg-slate-900 p-8 text-center shadow-glow animate-custom-float">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-3xl text-emerald-400">
+                <i className="fa-solid fa-check"></i>
+              </div>
+              <h3 className="font-display text-2xl font-semibold text-white">Thank You!</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                Your message has been sent successfully. I will get back to you soon.
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </section>
   );
 }
